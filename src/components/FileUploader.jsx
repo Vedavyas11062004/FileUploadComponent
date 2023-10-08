@@ -45,13 +45,13 @@ const FileUploader = () => {
 
   const handlePopUp1 = () => {
     document.getElementById("popup1").click();
-    // const timer = setTimeout(() => {
-    //   document.getElementById("dismissBtn").click();
-    //   setIsOpen(true);
-    // }, 5000);
-    // return () => {
-    //   clearTimeout(timer);
-    // };
+    const timer = setTimeout(() => {
+      document.getElementById("dismissBtn").click();
+      setIsOpen(true);
+    }, 5000);
+    return () => {
+      clearTimeout(timer);
+    };
   };
 
   const handleFormSubmit = (e) => {
