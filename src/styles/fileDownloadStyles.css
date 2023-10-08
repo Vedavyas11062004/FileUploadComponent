@@ -1,7 +1,6 @@
 .downLoadDiv {
   width: 500px;
   height: 300px;
-  padding: "20px";
   background: #ffffff;
   margin-inline: auto;
   display: flex;
@@ -10,8 +9,7 @@
   flex-direction: column;
   gap: 1rem;
   padding-top: 3rem;
-  border-top-left-radius: 24px;
-  border-top-right-radius: 24px;
+  border-radius: 24px;
   margin-block: 1rem;
   box-shadow: 4px 4px 250px 0px #3e45e68c;
 }
