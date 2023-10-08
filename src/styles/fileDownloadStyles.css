@@ -37,4 +37,7 @@ h2 {
   .downLoadDiv{
     width: 80vw;
   }
+  h2{
+    font-size: 1rem;
+  }
 }
