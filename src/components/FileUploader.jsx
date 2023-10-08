@@ -79,26 +79,19 @@ const FileUploader = () => {
           >
             {previewUrl ? (
               <div className="innerFileUpload">
-                <button
-                  onClick={handleRemove}
-                  className="crossBtn"
-                >
-                <img src="./Vector.svg" alt="img2.."></img>
+                <button onClick={handleRemove} className="crossBtn">
+                  <img src="./Vector.svg" alt="img2.."></img>
                 </button>
                 <img
                   className="previewImage"
                   src={previewUrl}
                   alt="Preview"
-                  style={{ maxWidth: "80%", maxHeight: "160px"}}
+                  style={{ maxWidth: "80%", maxHeight: "160px" }}
                 />
               </div>
             ) : (
-              <p className="dropBoxText">
-                <span onClick={handleButtonClick} className="clickBtn">
-                  click
-                </span>
-                {" "} to browse or
-                Drag and drop your files
+              <p onClick={handleButtonClick} className="dropBoxText">
+                Click to browse or drag and drop your files
               </p>
             )}
           </div>
