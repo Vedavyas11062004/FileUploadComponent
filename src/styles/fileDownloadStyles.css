@@ -1,10 +1,8 @@
 .downLoadDiv {
-  width: 600px;
+  width: 500px;
   height: 300px;
-  border: 1px dashed black;
   padding: "20px";
-  /* background-color: red; */
-  border: 1px dashed black;
+  background: #FFFFFF;
   width: 600px;
   height: 300px;
   margin-inline: auto;
@@ -12,5 +10,24 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
+  padding-block:3rem;
+  border-radius: 3rem;
+  margin-block: 2rem;
+  box-shadow: 4px 4px 250px 0px #3E45E68C;
+}
+
+h2{
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.downLoadDiv > button{
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  padding-inline: 2rem;
+  padding-block: .5rem;
+  border : none;
+  border-radius: 1.5rem;
 }

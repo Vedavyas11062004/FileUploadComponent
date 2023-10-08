@@ -1,4 +1,4 @@
-import React, { useState} from "react";
+import React, { useState } from "react";
 import "../styles/fileUploadStyles.css";
 import "react-toastify/dist/ReactToastify.css";
 import LoadingAnimation from "./LoadingAnimation";
@@ -65,8 +65,13 @@ const FileUploader = () => {
   return (
     <div>
       {!isOpen && (
-        <div>
-          <h2>Drag & Drop File Upload</h2>
+        <div className="outerContainer">
+          <form onSubmit={handleFormSubmit}>
+            <input type="file" id="fileInput" onChange={handleFileUpload} />
+            <button type="submit" disabled={!selectedFile} className="button">
+              Upload your leads
+            </button>
+          </form>
           <div
             onDrop={handleDrop}
             onDragOver={handleDragOver}
@@ -77,8 +82,9 @@ const FileUploader = () => {
                 <button
                   onClick={handleRemove}
                   style={{ position: "absolute", top: 0, right: 0 }}
+                  className="crossBtn"
                 >
-                  Remove
+                <img src="./Vector.svg" alt="img2.."></img>
                 </button>
                 <img
                   src={previewUrl}
@@ -90,10 +96,9 @@ const FileUploader = () => {
               <p className="dropBoxText">
                 <button onClick={handleButtonClick} className="clickBtn">
                   click
-                </button>{" "}
-                to browse or
-                <br />
-                Drag & drop a file here,
+                </button>
+                {" "} to browse or
+                Drag and drop your files
               </p>
             )}
           </div>
@@ -104,25 +109,27 @@ const FileUploader = () => {
             aria-labelledby="exampleModalLabel"
             aria-hidden="true"
           >
-            <div className="modal-dialog">
+            <div className="modal-dialog modal-dialog-centered">
               <div className="modal-content">
                 <div className="modal-header">
-                  <h1 className="modal-title fs-5" id="exampleModalLabel">
+                  <h3 className="modal-title fs-5" id="exampleModalLabel">
                     Generating Content
-                  </h1>
+                  </h3>
+                  <p>COLD OUTREACH SENTENCES...</p>
                 </div>
                 <div className="modal-body">
                   <LoadingAnimation />
-                </div>
-                <div className="modal-footer">
                   <button
                     type="button"
                     className="btn btn-secondary"
                     data-bs-dismiss="modal"
                     id="dismissBtn"
                   >
-                    Close
+                    cancel
                   </button>
+                </div>
+                <div className="modal-footer">
+                  23%-2039/29220
                 </div>
               </div>
             </div>
@@ -139,12 +146,6 @@ const FileUploader = () => {
               Launch static backdrop modal
             </button>
           </div>
-          <form onSubmit={handleFormSubmit}>
-            <input type="file" id="fileInput" onChange={handleFileUpload} />
-            <button type="submit" disabled={!selectedFile} className="button">
-              Upload
-            </button>
-          </form>
         </div>
       )}
       {isOpen && <FileDownload />}
