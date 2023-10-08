@@ -112,3 +112,12 @@ h2 {
   align-items: center;
   justify-content: center;
 }
+
+@media (max-width: 600px) {
+  .outerContainer{
+    width: 80vw;
+  }
+  .fileUploadDiv{
+    width: 70vw;
+  }
+}
