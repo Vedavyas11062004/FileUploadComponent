@@ -45,13 +45,13 @@ const FileUploader = () => {
 
   const handlePopUp1 = () => {
     document.getElementById("popup1").click();
-    const timer = setTimeout(() => {
-      document.getElementById("dismissBtn").click();
-      setIsOpen(true);
-    }, 5000);
-    return () => {
-      clearTimeout(timer);
-    };
+    // const timer = setTimeout(() => {
+    //   document.getElementById("dismissBtn").click();
+    //   setIsOpen(true);
+    // }, 5000);
+    // return () => {
+    //   clearTimeout(timer);
+    // };
   };
 
   const handleFormSubmit = (e) => {
@@ -78,18 +78,18 @@ const FileUploader = () => {
             className="fileUploadDiv"
           >
             {previewUrl ? (
-              <div style={{ position: "relative", top: 5, right: 5 }}>
+              <div className="innerFileUpload">
                 <button
                   onClick={handleRemove}
-                  style={{ position: "absolute", top: 0, right: 0 }}
                   className="crossBtn"
                 >
                 <img src="./Vector.svg" alt="img2.."></img>
                 </button>
                 <img
+                  className="previewImage"
                   src={previewUrl}
                   alt="Preview"
-                  style={{ maxWidth: "100%", maxHeight: "200px" }}
+                  style={{ maxWidth: "80%", maxHeight: "160px"}}
                 />
               </div>
             ) : (
@@ -110,7 +110,7 @@ const FileUploader = () => {
             aria-hidden="true"
           >
             <div className="modal-dialog modal-dialog-centered">
-              <div className="modal-content">
+              <div className="modal-content modalBox">
                 <div className="modal-header">
                   <h3 className="modal-title fs-5" id="exampleModalLabel">
                     Generating Content
@@ -129,7 +129,7 @@ const FileUploader = () => {
                     <img src="./Vector.svg" alt="" />
                   </button>
                 </div>
-                <div className="modal-footer">
+                <div className="modal-footer modalBox2">
                   <img src="./Tick.svg" alt="img4.." /> 23%-2039/29220
                 </div>
               </div>
