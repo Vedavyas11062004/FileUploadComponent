@@ -94,9 +94,9 @@ const FileUploader = () => {
               </div>
             ) : (
               <p className="dropBoxText">
-                <button onClick={handleButtonClick} className="clickBtn">
+                <span onClick={handleButtonClick} className="clickBtn">
                   click
-                </button>
+                </span>
                 {" "} to browse or
                 Drag and drop your files
               </p>

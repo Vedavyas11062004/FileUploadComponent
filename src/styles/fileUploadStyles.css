@@ -1,23 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 h2 {
   text-align: center;
   font-family: sans-serif;
 }
 
 .outerContainer {
-  background: #FFFFFF;
-  box-shadow: 4px 4px 250px 0px #3E45E68C;
+  background: #ffffff;
+  box-shadow: 4px 4px 250px 0px #3e45e68c;
   display: flex;
   align-items: center;
   flex-direction: column;
   width: 550px;
-  padding-block:3rem;
+  padding-block: 3rem;
   border-radius: 3rem;
   margin-inline: auto;
-  margin-block:3rem;
+  margin-block: 3rem;
 }
 
 .dropBoxText {
-  font-family: sans-serif;
+  font-family: 'Poppins', sans-serif;
   color: #636465;
   font-size: 1.5rem;
   width: 50%;
@@ -40,9 +41,10 @@ h2 {
 }
 
 .button {
+  font-family: 'Poppins', sans-serif;
   margin-inline: auto;
   margin: 1rem;
-  padding-block: .5rem;
+  padding-block: 0.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -58,41 +60,40 @@ h2 {
   display: none;
 }
 
-#dismissBtn{
-    margin-block:1rem;
-    float: right;
-    background-color: black;
-    color: white;
-    font-weight: bold;
-    border-radius: 1.5rem;
-    padding-inline:1.5rem;
-    border: none;
-    padding-block:.25rem;
-    display: flex;
-    align-items: center;
-    gap: .5rem;
+#dismissBtn {
+  margin-block: 1rem;
+  float: right;
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  border-radius: 1.5rem;
+  padding-inline: 1.5rem;
+  border: none;
+  padding-block: 0.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
-.modal-header{
-    display: flex;
-    flex-direction: column;
-    align-items:flex-start;
-    border-bottom: none;
+.modal-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-bottom: none;
 }
-.modal-header > p{
-   font-size: small;
+.modal-header > p {
+  font-size: small;
 }
-.modal-footer{
-    background-color: #F7F9FB;
-    display: flex;
-    justify-content: flex-start;
+.modal-footer {
+  background-color: #f7f9fb;
+  display: flex;
+  justify-content: flex-start;
 }
 
 .clickBtn {
   border: none;
   background-color: inherit;
-  font-size: 1.5rem;
+  /* font-size: 1.5rem; */
   color: blue;
-  font-family: sans-serif;
   padding: 0%;
 }
 
@@ -100,13 +101,13 @@ h2 {
   cursor: pointer;
 }
 
-.crossBtn{
+.crossBtn {
   border: none;
   background-color: inherit;
   transform: scale(1.5) translateX(20%) translateY(-20%);
   border-radius: 50%;
   background-color: black;
-  width : 20px;
+  width: 20px;
   height: 20px;
   display: flex;
   align-items: center;
@@ -114,13 +115,13 @@ h2 {
 }
 
 @media (max-width: 600px) {
-  .outerContainer{
+  .outerContainer {
     width: 80vw;
   }
-  .fileUploadDiv{
+  .fileUploadDiv {
     width: 70vw;
   }
-  .dropBoxText{
+  .dropBoxText {
     font-size: 1rem;
   }
 }
