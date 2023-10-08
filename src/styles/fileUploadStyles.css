@@ -1,0 +1,52 @@
+h2{
+    text-align: center;
+    font-family: sans-serif;
+}
+
+.dropBoxText{
+    font-family: sans-serif;
+}
+
+.fileUploadDiv {
+  padding: "20px";
+  text-align: "center";
+  /* background-color: red; */
+  border: 1px dashed black;
+  width: 600px;
+  height: 300px;
+  margin-inline: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.button{
+    width: 80px;
+    height: 30px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 1rem;
+    padding-block:1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#fileInput{
+    display: none;
+}
+
+.clickBtn{
+    border: none;
+    background-color: inherit;
+    font-size: 1.25rem;
+    color: blue;
+    font-family: sans-serif;
+    padding: 0%;
+}
+
+.clickBtn:hover{
+    cursor: pointer;
+}

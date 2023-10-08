@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap");
+
+body {
+  /* background-color: rgb(186, 195, 237); */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5vh;
+  background: linear-gradient()
+}
+
+.react-chatbot-kit-chat-container {
+  width: 90vw;
+}
+
+.react-chatbot-kit-chat-bot-message {
+  margin: 0%;
+}
+
+.react-chatbot-kit-chat-inner-container {
+  height: 90vh;
+}
+
+.react-chatbot-kit-chat-message-container {
+  height: 70vh;
+}
+
+.Button-bot {
+  border: none;
+  background-color: inherit;
+  color: #066dbd;
+  border: 1px solid #066dbd;
+  padding-inline: 1.5rem;
+  padding-block: 0.5rem;
+  border-radius: 2rem;
+}
+
+.Button-bot:hover {
+  background-color: #066dbd;
+  color: white;
+}
+
+.InputBox {
+  border-radius: 0.5rem;
+  height: 1.5rem;
+  margin-inline: 0.25rem;
+  padding-inline: 0.5rem;
+  border: 1px solid rgb(101, 100, 100);
+}
+
+.InputContainer {
+  display: flex;
+  margin-block: 1.5rem;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.counter {
+  background-color: #2898ec;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  margin-block: 1rem;
+  color: white;
+  font-size: larger;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.LandingPage__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 80vw;
+  height: 85vh;
+  border: 1px solid rgb(184, 183, 183);
+  border-radius: 1rem;
+  padding: 1rem;
+  font-family: "Roboto", sans-serif;
+}
+.LandingPage__container h1 {
+  color: #066dbd;
+  font-size: 1.7rem;
+}
+.LandingPage__image {
+  width: 80%;
+  transform: translateX(20%);
+  margin-left: auto;
+  margin-right: auto;
+  margin-block: 2rem;
+}
+
+.LandingPage__innercontainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.LandingPage__innercontainer p {
+  text-align: center;
+  color: gray;
+  font-size: 1rem;
+}
+
+.Enroll-btn {
+  width: 80vw;
+  padding-block: 0.75rem;
+  border-radius: 1rem;
+  border: none;
+  background-color: #3369ff;
+  color: white;
+  font-size: larger;
+  font-weight: 400;
+}
+
+.BotPage{
+  border: 1px solid gray;
+  border-radius: .25rem;
+}
+
+.ExitImage{
+  width: 100%;
+  /* transform: translateX(20%); */
+  margin-left: auto;
+  margin-right: auto;
+  margin-block: 1rem;
+  margin-top: 4rem;
+}
+
+.ExitPage__container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80vw;
+  height: 85vh;
+  border: 1px solid rgb(184, 183, 183);
+  border-radius: 1rem;
+  padding: 1rem;
+  font-family: "Roboto", sans-serif;
+  gap: .5rem;
+}
+
+.ExitPage__container p{
+  margin-inline: 2rem;
+}
+
+.background__img{
+  background-color: #E7F1FE;
+}
+
+.ExitPage__label{
+  align-self: flex-start;
+  margin-inline: 2rem;
+  margin-block: .25rem;
+}

@@ -1,0 +1,69 @@
+:root {
+  --green: #b8d953;
+  --lilac: #b2b2eb;
+  --pink: #bb86e9;
+  --dark-green: #529a91;
+  --peach: #fe96b7;
+  --black: #191819;
+  --grey: #2a292a;
+  --white: #d9d9d9;
+}
+
+* {
+  margin: 0;
+}
+
+/* body {
+  position: absolute;
+  background-color: black;
+  color: var(--white);
+  top: 40%;
+  left: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+} */
+
+h1 {
+  text-align: center;
+  font-family: "Heebo", sans-serif;
+  font-weight: 100;
+  margin: 10px 20px 0 0;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.progress-bar {
+  position: relative;
+  height: 8px;
+  width: 250px;
+  background: var(--white);
+  border-radius: 25px;
+}
+
+.progress-fill {
+  position: absolute;
+  height: 10px;
+  width: 0%;
+  animation: progress-forward 5s infinite;
+  background: #3A41F0;
+  border-radius: 15px;
+}
+
+@keyframes progress-forward {
+  0% {
+    width: 0%;
+  }
+  25% {
+    width: 50%;
+  }
+  50% {
+    width: 75%;
+  }
+  75% {
+    width: 85%;
+  }
+  100% {
+    width: 100%;
+  }
+}

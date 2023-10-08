@@ -1,0 +1,16 @@
+.downLoadDiv {
+  width: 600px;
+  height: 300px;
+  border: 1px dashed black;
+  padding: "20px";
+  /* background-color: red; */
+  border: 1px dashed black;
+  width: 600px;
+  height: 300px;
+  margin-inline: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+}
