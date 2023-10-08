@@ -36,7 +36,7 @@ h1 {
 .progress-bar {
   position: relative;
   height: 8px;
-  width: 250px;
+  width: 100%;
   background: var(--white);
   border-radius: 25px;
 }

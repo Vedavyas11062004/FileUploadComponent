@@ -126,10 +126,11 @@ const FileUploader = () => {
                     id="dismissBtn"
                   >
                     cancel
+                    <img src="./Vector.svg" alt="" />
                   </button>
                 </div>
                 <div className="modal-footer">
-                  23%-2039/29220
+                  <img src="./Tick.svg" alt="img4.." /> 23%-2039/29220
                 </div>
               </div>
             </div>

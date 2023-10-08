@@ -68,6 +68,9 @@ h2 {
     padding-inline:1.5rem;
     border: none;
     padding-block:.25rem;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
 }
 .modal-header{
     display: flex;
