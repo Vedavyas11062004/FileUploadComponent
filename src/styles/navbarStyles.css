@@ -1,0 +1,12 @@
+
+.navbar{
+    width: 100vw;
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid white; */
+}
+
+.rightPart{
+    padding-inline: 3rem;
+}

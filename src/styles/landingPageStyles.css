@@ -1,0 +1,88 @@
+.topPart {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  padding-block: 3rem;
+}
+
+.topPart h1 {
+  font-family: "Poppins", sans-serif;
+  font-size: 4rem;
+  font-weight: 900;
+  line-height: 75px;
+  letter-spacing: -0.055em;
+  text-align: center;
+  color: white;
+  width: 60%;
+  text-align: center;
+}
+
+.topPart h1 span {
+  color: #4147e0;
+}
+
+.topPart p {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 39px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #cecece;
+  width: 60vw;
+}
+
+.bottomPart {
+  display: flex;
+  gap: 3rem;
+}
+
+.bottomPartLeft {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  /* border: 1px solid wheat; */
+}
+.bottomPartRight {
+  flex: 1;
+  /* border: 1px solid wheat; */
+  display: flex;
+  gap: 3rem;
+}
+.leftOne {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3rem;
+}
+.leftOne label {
+  color: white;
+  margin: 0.5rem;
+}
+.leftOne input {
+  background-color: inherit;
+  height: 50px;
+}
+.inputDropDown {
+  height: 50px;
+}
+.inputDropDown select {
+  background-color: inherit;
+}
+.rightOne {
+  flex: 1;
+  align-self: flex-end;
+  margin-bottom: 3rem;
+}
+
+.rightOne button {
+  /* width: 218px; */
+  height: 52px;
+  padding-inline:1rem;
+  border-radius: 12px;
+  background: linear-gradient(100.85deg, #3A41F0 41.96%, #161B92 88.87%);
+  border: none;
+  color: white;
+}
