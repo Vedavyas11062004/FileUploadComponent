@@ -13,11 +13,10 @@ const FileUploader = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setPercentage(prevPercentage => {
-        const randomIncrement = Math.floor(Math.random() * 10);
-        const newPercentage = Math.min(prevPercentage + randomIncrement, 100);
-        return newPercentage;
+        const newPercentage = prevPercentage + 1;
+        return newPercentage <= 100 ? newPercentage : 100;
       });
-    }, 1000); // Change this interval as needed (in milliseconds)
+    }, 200); // Change this interval as needed (in milliseconds)
 
     return () => clearInterval(interval);
   }, []);
@@ -97,7 +96,7 @@ const FileUploader = () => {
                 </button>
                 <img
                   className="previewImage"
-                  src={previewUrl}
+                  src='./csv 1.svg'
                   alt="Preview"
                   style={{ maxWidth: "80%", maxHeight: "160px" }}
                 />

@@ -7,8 +7,7 @@ function Navbar() {
     <div className='navbar'>
       <img src="./logo.svg" alt="logo.." />
       <div className='rightPart' style={{color : 'white'}}>
-        {/* <Dropdown/> */}
-        Dropdown
+        <Dropdown/>
       </div>
     </div>
   )

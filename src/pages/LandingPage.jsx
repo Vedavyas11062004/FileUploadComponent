@@ -1,10 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "../components/Navbar";
 import "../styles/landingPageStyles.css";
 import FileUploader from "../components/FileUploader";
 import BottomLayout from "../components/BottomLayout";
 
 function LandingPage() {
+  const [selectedOption, setSelectedOption] = useState("Option 1");
+  const [showOptions, setShowOptions] = useState(false);
+
+  const handleOptionClick = (option) => {
+    setSelectedOption(option);
+    setShowOptions(false);
+  };
+
+  const toggleOptions = () => {
+    console.log(showOptions);
+    setShowOptions(!showOptions);
+  };
   return (
     <div>
       <Navbar />
@@ -37,18 +49,43 @@ function LandingPage() {
                 />
               </div>
               <div>
-                <label htmlFor="chooseInput">Goal</label>
-                <div class="input-group inputDropDown" data-bs-theme="dark">
-                  <select
-                    class="form-select selectOptions"
-                    id="inputGroupSelect04"
-                    aria-label="Example select with button addon"
+                <div
+                  for="exampleFormControlInput1"
+                  class="form-label"
+                  style={{ color: "white" }}
+                >
+                  Goal
+                </div>
+                <div className="custom-dropdown">
+                  <div
+                    className="custom-selected-option"
+                    onClick={toggleOptions}
                   >
-                    <option selected>Cold Outrech</option>
-                    <option value="1">Job Request</option>
-                  </select>
-
-                  
+                    {selectedOption || "Select an option"}
+                    <img src="./Icon.svg" alt="Icon" />
+                  </div>
+                  {showOptions && (
+                    <div className="custom-options">
+                      <div
+                        className="custom-option"
+                        onClick={() => handleOptionClick("Option 1")}
+                      >
+                        Option 1
+                      </div>
+                      <div
+                        className="custom-option"
+                        onClick={() => handleOptionClick("Option 2")}
+                      >
+                        Option 2
+                      </div>
+                      <div
+                        className="custom-option"
+                        onClick={() => handleOptionClick("Option 3")}
+                      >
+                        Option 3
+                      </div>
+                    </div>
+                  )}
                 </div>
               </div>
               <div>
@@ -66,13 +103,15 @@ function LandingPage() {
               </div>
             </div>
             <div className="rightOne">
-              <button>Generate content <img src='./thunder.svg' alt="img.."></img> </button>
+              <button>
+                Generate content <img src="./thunder.svg" alt="img.."></img>{" "}
+              </button>
             </div>
           </div>
         </div>
       </div>
       {/* footer */}
-      <BottomLayout/>
+      <BottomLayout />
     </div>
   );
 }
