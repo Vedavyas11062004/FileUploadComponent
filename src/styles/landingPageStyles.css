@@ -42,6 +42,7 @@
   flex: 1;
   display: flex;
   justify-content: flex-end;
+  margin-left: 1rem;
   /* border: 1px solid wheat; */
 }
 .bottomPartRight {
@@ -49,6 +50,7 @@
   /* border: 1px solid wheat; */
   display: flex;
   gap: 3rem;
+  margin-right: 1rem;
 }
 .leftOne {
   flex: 1;

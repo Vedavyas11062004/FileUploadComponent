@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState , useEffect } from "react";
 import "../styles/fileUploadStyles.css";
 import "react-toastify/dist/ReactToastify.css";
 import LoadingAnimation from "./LoadingAnimation";
@@ -8,6 +8,19 @@ const FileUploader = () => {
   const [selectedFile, setSelectedFile] = useState(null);
   const [previewUrl, setPreviewUrl] = useState(null);
   const [isOpen, setIsOpen] = useState(false);
+  const [percentage, setPercentage] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setPercentage(prevPercentage => {
+        const randomIncrement = Math.floor(Math.random() * 10);
+        const newPercentage = Math.min(prevPercentage + randomIncrement, 100);
+        return newPercentage;
+      });
+    }, 1000); // Change this interval as needed (in milliseconds)
+
+    return () => clearInterval(interval);
+  }, []);
 
   const handleButtonClick = () => {
     document.getElementById("fileInput").click();
@@ -123,7 +136,7 @@ const FileUploader = () => {
                   </button>
                 </div>
                 <div className="modal-footer modalBox2">
-                  <img src="./Tick.svg" alt="img4.." /> 23%-2039/29220
+                  <img src="./Tick.svg" alt="img4.." /> {percentage}%-2039/29220
                 </div>
               </div>
             </div>
