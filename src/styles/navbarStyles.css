@@ -10,3 +10,16 @@
 .rightPart{
     padding-inline: 3rem;
 }
+
+@media (max-width:800px)
+{
+    .navbar img{
+        width:200px;
+        transform:scale(1.25);
+        padding-left:.75rem;
+    }
+    .rightPart{
+        padding-left: 0px;
+        padding-right: .75rem;
+    }
+}

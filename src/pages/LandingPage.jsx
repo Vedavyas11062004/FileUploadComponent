@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import "../styles/landingPageStyles.css";
 import FileUploader from "../components/FileUploader";
+import BottomLayout from "../components/BottomLayout";
 
 function LandingPage() {
   return (
@@ -39,13 +40,15 @@ function LandingPage() {
                 <label htmlFor="chooseInput">Goal</label>
                 <div class="input-group inputDropDown" data-bs-theme="dark">
                   <select
-                    class="form-select"
+                    class="form-select selectOptions"
                     id="inputGroupSelect04"
                     aria-label="Example select with button addon"
                   >
                     <option selected>Cold Outrech</option>
                     <option value="1">Job Request</option>
                   </select>
+
+                  
                 </div>
               </div>
               <div>
@@ -63,12 +66,13 @@ function LandingPage() {
               </div>
             </div>
             <div className="rightOne">
-              <button>Generate content</button>
+              <button>Generate content <img src='./thunder.svg' alt="img.."></img> </button>
             </div>
           </div>
         </div>
       </div>
       {/* footer */}
+      <BottomLayout/>
     </div>
   );
 }

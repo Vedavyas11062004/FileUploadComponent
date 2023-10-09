@@ -67,7 +67,7 @@ const FileUploader = () => {
       {!isOpen && (
         <div className="outerContainer">
           <form onSubmit={handleFormSubmit}>
-            <input type="file" id="fileInput" onChange={handleFileUpload} />
+            <input type="file" id="fileInput" accept=".csv" onChange={handleFileUpload} />
             <button type="submit" disabled={!selectedFile} className="button">
               Upload your leads
             </button>
