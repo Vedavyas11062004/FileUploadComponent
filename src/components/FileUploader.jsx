@@ -1,22 +1,25 @@
-import React, { useState , useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import "../styles/fileUploadStyles.css";
 import "react-toastify/dist/ReactToastify.css";
 import LoadingAnimation from "./LoadingAnimation";
-import FileDownload from "./FileDownload";
+// import FileDownload from "./FileDownload";
+import { useNavigate } from "react-router-dom";
 
 const FileUploader = () => {
   const [selectedFile, setSelectedFile] = useState(null);
   const [previewUrl, setPreviewUrl] = useState(null);
   const [isOpen, setIsOpen] = useState(false);
   const [percentage, setPercentage] = useState(0);
+  const navigate = useNavigate();
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setPercentage(prevPercentage => {
-        const newPercentage = prevPercentage + 1;
-        return newPercentage <= 100 ? newPercentage : 100;
-      });
-    }, 200); // Change this interval as needed (in milliseconds)
+    let interval;
+        interval = setInterval(() => {
+        setPercentage((prevPercentage) => {
+          const newPercentage = prevPercentage + 1;
+          return newPercentage <= 100 ? newPercentage : 100;
+        });
+      }, 200);
 
     return () => clearInterval(interval);
   }, []);
@@ -61,6 +64,7 @@ const FileUploader = () => {
       document.getElementById("dismissBtn").click();
       setIsOpen(true);
     }, 5000);
+    navigate("/download");
     return () => {
       clearTimeout(timer);
     };
@@ -79,7 +83,12 @@ const FileUploader = () => {
       {!isOpen && (
         <div className="outerContainer">
           <form onSubmit={handleFormSubmit}>
-            <input type="file" id="fileInput" accept=".csv" onChange={handleFileUpload} />
+            <input
+              type="file"
+              id="fileInput"
+              accept=".csv"
+              onChange={handleFileUpload}
+            />
             <button type="submit" disabled={!selectedFile} className="button">
               Upload your leads
             </button>
@@ -96,7 +105,7 @@ const FileUploader = () => {
                 </button>
                 <img
                   className="previewImage"
-                  src='./csv 1.svg'
+                  src="./csv 1.svg"
                   alt="Preview"
                   style={{ maxWidth: "80%", maxHeight: "160px" }}
                 />
@@ -154,7 +163,6 @@ const FileUploader = () => {
           </div>
         </div>
       )}
-      {isOpen && <FileDownload />}
     </div>
   );
 };

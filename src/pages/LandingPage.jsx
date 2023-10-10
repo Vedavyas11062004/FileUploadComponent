@@ -62,7 +62,7 @@ function LandingPage() {
                     onClick={toggleOptions}
                   >
                     {selectedOption || "Select an option"}
-                    <img src="./Icon2.svg" alt="Icon" />
+                    <img src="./Icon2.svg" alt="Icon" className="IconImg"/>
                   </div>
                   {showOptions && (
                     <div className="custom-options">

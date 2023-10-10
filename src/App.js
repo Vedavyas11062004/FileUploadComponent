@@ -1,15 +1,18 @@
 import React from "react";
-// import FileUploader from "./components/FileUploader";
-import './App.css';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";import './App.css';
 import LandingPage from "./pages/LandingPage";
+import DownloadPage from "./pages/DownloadPage";
+
 
 function App() {
   return (
     <>
-    <div>
-      {/* <FileUploader/> */}
-      <LandingPage/>
-    </div>
+      <Router>
+      <Routes>
+        <Route exact path="/" element={<LandingPage/>} />
+        <Route path="/download" element={<DownloadPage/>} />
+      </Routes>
+    </Router>
     </>
   );
 }

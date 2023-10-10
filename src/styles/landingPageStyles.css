@@ -66,6 +66,7 @@
 .leftOne input {
   background-color: inherit;
   height: 50px;
+  border: .5px solid #BEC5D1;
 }
 .selectOptions{
   background-color: red;
@@ -106,10 +107,12 @@
 .custom-selected-option {
   /* flex: 1; */
   width: 100%;
+  height: 50px;
   padding: 8px;
   border-radius: 4px;
   cursor: pointer;
   display: flex;
+  align-items: center;
   background-color: inherit;
   color: white;
   justify-content: space-between;
@@ -131,11 +134,15 @@
   z-index: 1;
   border-radius: 4px;
   margin-block:.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
 .custom-option {
   padding: 12px 16px;
   cursor: pointer;
+  border: .5px solid #BEC5D1;
 }
 
 .custom-option:hover {
