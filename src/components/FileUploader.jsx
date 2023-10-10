@@ -14,12 +14,12 @@ const FileUploader = () => {
 
   useEffect(() => {
     let interval;
-        interval = setInterval(() => {
-        setPercentage((prevPercentage) => {
-          const newPercentage = prevPercentage + 1;
-          return newPercentage <= 100 ? newPercentage : 100;
-        });
-      }, 200);
+    interval = setInterval(() => {
+      setPercentage((prevPercentage) => {
+        const newPercentage = prevPercentage + 1;
+        return newPercentage <= 100 ? newPercentage : 100;
+      });
+    }, 200);
 
     return () => clearInterval(interval);
   }, []);
@@ -63,8 +63,8 @@ const FileUploader = () => {
     const timer = setTimeout(() => {
       document.getElementById("dismissBtn").click();
       setIsOpen(true);
+      navigate('/download')
     }, 5000);
-    navigate("/download");
     return () => {
       clearTimeout(timer);
     };
