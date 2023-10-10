@@ -50,10 +50,11 @@ h2 {
 
 .downLoadContainer{
   width: 100%;
-  height: 100vh;
+  height: 70vh;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  flex-direction: column;
 }
 
 @media (max-width: 600px) {

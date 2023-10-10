@@ -59,11 +59,11 @@ const FileUploader = () => {
   };
 
   const handlePopUp1 = () => {
+    navigate('/download')
     document.getElementById("popup1").click();
     const timer = setTimeout(() => {
       document.getElementById("dismissBtn").click();
       setIsOpen(true);
-      navigate('/download')
     }, 5000);
     return () => {
       clearTimeout(timer);
