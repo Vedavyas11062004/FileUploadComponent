@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
-import '../styles/dropDownStyles.css'; // Import the CSS file
+import React, { useState } from "react";
+import "../styles/dropDownStyles.css"; // Import the CSS file
 
 const Dropdown = () => {
-  const [selectedOption, setSelectedOption] = useState('Spain 🇪🇸');
+  const [selectedOption, setSelectedOption] = useState("Spain 🇪🇸");
   const [showOptions, setShowOptions] = useState(false);
-  const [selectedUrl,setSelectedUrl] = useState('./Label.svg');
+  const [selectedUrl, setSelectedUrl] = useState("./Label.svg");
 
   const handleOptionClick = (option) => {
     setSelectedOption(option);
@@ -19,31 +19,51 @@ const Dropdown = () => {
   return (
     <div>
       <div className="dropdown">
-        <div
-          className="selected-option"
-          onClick={toggleOptions}
-        >
+        <div className="selected-option" onClick={toggleOptions}>
           {/* {selectedOption || 'Select an option'} */}
-          <img src={selectedUrl} alt='img..'></img>
-          <img src='./Icon.svg' alt='img..' className='IconImg'></img>
+          {<img src={selectedUrl} alt="img.."></img> || selectedOption}
+          <img src="./Icon.svg" alt="img.." className="IconImg"></img>
         </div>
         {showOptions && (
           <div className="options">
-            <div className="option" onClick={() => setSelectedUrl('./Label.svg')}>
-            <img src='./Label.svg' alt='img3'></img>
+            <div
+              className="option"
+              onClick={() => {
+                setSelectedUrl("./Label.svg");
+                handleOptionClick("Spain 🇪🇸");
+              }}
+            >
+              <img src="./Label.svg" alt="img3"></img>
             </div>
-            <div className="option" onClick={() => setSelectedUrl('./Label2.svg')}>
-            <img src='./Label2.svg' alt='img3'></img>
+            <div
+              className="option"
+              onClick={() => {
+                setSelectedUrl("./Label2.svg");
+                handleOptionClick("French 🇫🇷");
+              }}
+            >
+              <img src="./Label2.svg" alt="img3"></img>
             </div>
-            <div className="option" onClick={() => setSelectedUrl('./Label3.svg')}>
-            <img src='./Label3.svg' alt='img3'></img>
+            <div
+              className="option"
+              onClick={() => {
+                setSelectedUrl("./Label3.svg");
+                handleOptionClick("English 🏴󠁧󠁢󠁥󠁮󠁧󠁿 ");
+              }}
+            >
+              <img src="./Label3.svg" alt="img3"></img>
             </div>
-            <div className="option" onClick={() => setSelectedUrl('./Label4.svg')}>
-            <img src='./Label4.svg' alt='img3'></img>
+            <div
+              className="option"
+              onClick={() => {
+                setSelectedUrl("./Label4.svg");
+                handleOptionClick("German 🇩🇪");
+              }}
+            >
+              <img src="./Label4.svg" alt="img3"></img>
             </div>
           </div>
         )}
-        
       </div>
     </div>
   );
