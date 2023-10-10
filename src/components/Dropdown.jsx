@@ -23,7 +23,7 @@ const Dropdown = () => {
           onClick={toggleOptions}
         >
           {selectedOption || 'Select an option'}
-          <img src='./Icon.svg' className='IconImg'></img>
+          <img src='./Icon.svg' alt='img..' className='IconImg'></img>
         </div>
         {showOptions && (
           <div className="options">
