@@ -5,7 +5,7 @@ import FileUploader from "../components/FileUploader";
 import BottomLayout from "../components/BottomLayout";
 
 function LandingPage() {
-  const [selectedOption, setSelectedOption] = useState("Option 1");
+  const [selectedOption, setSelectedOption] = useState("Cold Outreach");
   const [showOptions, setShowOptions] = useState(false);
 
   const handleOptionClick = (option) => {
@@ -62,27 +62,21 @@ function LandingPage() {
                     onClick={toggleOptions}
                   >
                     {selectedOption || "Select an option"}
-                    <img src="./Icon.svg" alt="Icon" />
+                    <img src="./Icon2.svg" alt="Icon" />
                   </div>
                   {showOptions && (
                     <div className="custom-options">
                       <div
                         className="custom-option"
-                        onClick={() => handleOptionClick("Option 1")}
+                        onClick={() => handleOptionClick("Cold Outreach")}
                       >
-                        Option 1
+                        Cold Outreach
                       </div>
                       <div
                         className="custom-option"
-                        onClick={() => handleOptionClick("Option 2")}
+                        onClick={() => handleOptionClick("Job Request")}
                       >
-                        Option 2
-                      </div>
-                      <div
-                        className="custom-option"
-                        onClick={() => handleOptionClick("Option 3")}
-                      >
-                        Option 3
+                        Job Request
                       </div>
                     </div>
                   )}

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import '../styles/dropDownStyles.css'; // Import the CSS file
 
 const Dropdown = () => {
-  const [selectedOption, setSelectedOption] = useState('Option 1');
+  const [selectedOption, setSelectedOption] = useState('spain');
   const [showOptions, setShowOptions] = useState(false);
 
   const handleOptionClick = (option) => {
@@ -23,18 +23,21 @@ const Dropdown = () => {
           onClick={toggleOptions}
         >
           {selectedOption || 'Select an option'}
-          <img src='./Icon.svg'></img>
+          <img src='./Icon.svg' className='IconImg'></img>
         </div>
         {showOptions && (
           <div className="options">
-            <div className="option" onClick={() => handleOptionClick('Option 1')}>
-              Option 1
+            <div className="option" onClick={() => handleOptionClick('spain')}>
+            spain
             </div>
-            <div className="option" onClick={() => handleOptionClick('Option 2')}>
-              Option 2
+            <div className="option" onClick={() => handleOptionClick('French')}>
+            French
             </div>
-            <div className="option" onClick={() => handleOptionClick('Option 3')}>
-              Option 3
+            <div className="option" onClick={() => handleOptionClick('English')}>
+            English
+            </div>
+            <div className="option" onClick={() => handleOptionClick('German')}>
+            German
             </div>
           </div>
         )}

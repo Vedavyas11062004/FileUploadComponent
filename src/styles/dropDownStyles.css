@@ -1,3 +1,7 @@
+.IconImg{
+  width: 18px;
+  height: 18px;
+}
 .dropdown {
     position: relative;
     display: inline-block;
@@ -43,4 +47,9 @@
   .options.show {
     display: block;
   }
-  
+
+  @media (max-width: 500px) {
+    .selected-option{
+      width: 150px;
+    }
+  }
