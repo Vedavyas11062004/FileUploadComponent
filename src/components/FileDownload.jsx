@@ -11,7 +11,7 @@ export default function FileDownload() {
         Download <img src="./download.svg" alt="downloadimg..." />{" "}
       </button>
       <div className="buttomIcon">
-        <img src="./Tick.svg" alt="img4.." /> 100%-2039/29220
+        <img src="./Tick.svg" alt="img4.." /> 100%-29220/29220
       </div>
     </div>
   );

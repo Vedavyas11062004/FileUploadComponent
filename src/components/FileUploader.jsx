@@ -144,7 +144,7 @@ const FileUploader = () => {
                   </button>
                 </div>
                 <div className="modal-footer modalBox2">
-                  <img src="./Tick.svg" alt="img4.." /> {percentage}%-2039/29220
+                  <img src="./Tick.svg" alt="img4.." /> {percentage}%-{parseInt((percentage/100)*29220)}/29220
                 </div>
               </div>
             </div>
